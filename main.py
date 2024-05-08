@@ -8,7 +8,7 @@ import eurekaai.config.client as client
 
 NAMESPACE = "atul-bharadwaj-1"
 USERNAME = "atul.bharadwaj@symphonyai.com"  # This is the username for the profile you want to use
-PASSWORD = "MTcxNDk4ODczOXxOd3dBTkVnMFVEUTFRVXRTTmxvME4wUlJXa1UyTkVaSVRGSTJNbEpMVnpSVlVrVlNORXhWUlROTlFsQllTMVZZV0ZWRk5VNVpURkU9fK2lGwhrtK99JzZXqETBl0vAKAlSbUNlZkIBlojlawr7"
+PASSWORD = "MTcxNTA3NTc5MnxOd3dBTkVKVE1qWlBNMVV5VUV0V1ZrZFpSMUpTVlVoWlVGVlhNalJSU0VKQ1FVTkxUbFphVDFGT1VraFhXVTFKVVV0SVIxVk1XRUU9fHQfucgOexYtGnlX0KKmiXyS5HjCnX8XkIuo83i2v6il"
 
 kubeflow_setting = KubeflowSettings(username=USERNAME, key=PASSWORD, namespace=NAMESPACE, synchronous=True)
 
@@ -18,12 +18,12 @@ container_settings = ContainerSetting(parent_image="crescendoimages.azurecr.io/e
                                                     "pydantic==1.10.12", "pyiceberg==0.4.0"])
 
 
-@step(enable_cache=False)
+@step()
 def load_dataset_via_dl() -> None:
     print("-------hello world------")
 
 
-@pipeline(enable_cache=False, settings={"container": container_settings, "kubeflow": kubeflow_setting})
+@pipeline(settings={"container": container_settings, "kubeflow": kubeflow_setting})
 def data_library_pipeline(load_dataset_via_dl):
     load_dataset_via_dl()
 
