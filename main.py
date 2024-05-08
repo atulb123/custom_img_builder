@@ -8,7 +8,7 @@ import eurekaai.config.client as client
 
 NAMESPACE = "atul-bharadwaj-1"
 USERNAME = "atul.bharadwaj@symphonyai.com"  # This is the username for the profile you want to use
-PASSWORD = "MTcxNTA3NTc5MnxOd3dBTkVKVE1qWlBNMVV5VUV0V1ZrZFpSMUpTVlVoWlVGVlhNalJSU0VKQ1FVTkxUbFphVDFGT1VraFhXVTFKVVV0SVIxVk1XRUU9fHQfucgOexYtGnlX0KKmiXyS5HjCnX8XkIuo83i2v6il"
+PASSWORD = "MTcxNTE2MjM1NnxOd3dBTkRKU1ZFeE1RMHhKVlVSUldGRlFSVWRJTWs0eVZVNU5RMDFJVkZKU05saFVSRVJhUVRWUlJFSkxURXczTWpjelF6TTBSMUU9fAFUKu5Zxuv_nXtZ7CTVfdP0mWBnNj5pVOnLgJXjdvvZ"
 
 kubeflow_setting = KubeflowSettings(username=USERNAME, key=PASSWORD, namespace=NAMESPACE, synchronous=True)
 
