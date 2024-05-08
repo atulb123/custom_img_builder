@@ -23,7 +23,7 @@ def load_dataset_via_dl() -> None:
     print("-------hello world------")
 
 
-@pipeline(settings={"container": container_settings, "kubeflow": kubeflow_setting})
+@pipeline(enable_cache=False,settings={"container": container_settings, "kubeflow": kubeflow_setting})
 def data_library_pipeline(load_dataset_via_dl):
     load_dataset_via_dl()
 
